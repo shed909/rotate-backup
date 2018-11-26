@@ -2,7 +2,7 @@
 
 USAGE:
 
-$ rotate-backup.sh /FULLPATH/
+$ rotate-backup.sh /full/path/to/backupfile
 
 This script checks if the specified backup file exists,
 and if it was modified within the specified amount of days (default=1),
