@@ -10,9 +10,6 @@ usage()
 cat << EOF
 USAGE:
 
-
-USAGE:
-
 $ rotate-backup.sh /full/path/to/backupfile
 
 This script checks if the specified backup file exists,
