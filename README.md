@@ -13,11 +13,15 @@ amount of days (default=10).
 Must provide full path to file.
 
 OPTIONS:
+
 -r Specify Rentention period in days (default is $RETENTION)
+
 -h Specify healthchecks.io URL to ping
+
 -a Specify expected age of file in days (eg. if backup is done weekly, specify 7 days. Default is $FILEAGE)
 
 EXAMPLES:
+
 $ rotate-backup.sh /path/to/file
 
 $ rotate-backup.sh -a 7 /path/to/file
