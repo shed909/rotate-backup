@@ -10,12 +10,15 @@ usage()
 cat << EOF
 USAGE:
 
-$ rotate-file.sh /FULLPATH/
+
+USAGE:
+
+$ rotate-backup.sh /full/path/to/backupfile
 
 This script checks if the specified backup file exists,
 and if it was modified within the specified amount of days (default=1),
 it renames the file, appending the date modified to the end,
-then removes any files matching the specified path that are older than X
+then removes any files matching the specified path that are older than X 
 amount of days (default=10).
 
 Must provide full path to file.
@@ -26,13 +29,13 @@ OPTIONS:
 -a Specify expected age of file in days (eg. if backup is done weekly, specify 7 days. Default is $FILEAGE)
 
 EXAMPLES:
-$ rotate-file.sh /path/to/file
+$ rotate-backup.sh /path/to/file
 
-$ rotate-file.sh -a 7 /path/to/file
+$ rotate-backup.sh -a 7 /path/to/file
 
-$ rotate-file.sh -h https://hc-ping.com/your-uuid-here /path/to/file
+$ rotate-backup.sh -h https://hc-ping.com/your-uuid-here /path/to/file
 
-$ rotate-file.sh -r 30 https://hc-ping.com/your-uuid-here /path/to/file
+$ rotate-backup.sh -r 30 https://hc-ping.com/your-uuid-here /path/to/file
 
 EOF
 }
