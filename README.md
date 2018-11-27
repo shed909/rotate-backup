@@ -13,6 +13,7 @@ amount of days (default=10).
 Must provide full path to file.
 
 OPTIONS:
+
 -r Specify Rentention period in days (default is $RETENTION)
 
 -h Specify healthchecks.io URL to ping
