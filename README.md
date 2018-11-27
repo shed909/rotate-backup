@@ -31,4 +31,4 @@ $ rotate-backup.sh -m 7 /path/to/file
 $ rotate-backup.sh -r 30 /path/to/file
 
 
-$ rotate-backup.sh -h -r 7 https://hc-ping.com/your-uuid-here /path/to/file
+$ rotate-backup.sh -r 7 -h https://hc-ping.com/your-uuid-here /path/to/file
