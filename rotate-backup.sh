@@ -23,12 +23,12 @@ Must provide full path to file.
 OPTIONS:
 -r Specify Rentention period in days (default is $RETENTION)
 -h Specify healthchecks.io URL to ping
--a Specify expected age of file in days (eg. if backup is done weekly, specify 7 days. Default is $FILEAGE)
+-m Specify expected days file has been modified within (eg. if backup is done weekly, specify 7 days. Default is $FILEAGE)
 
 EXAMPLES:
 $ rotate-backup.sh /path/to/file
 
-$ rotate-backup.sh -a 7 /path/to/file
+$ rotate-backup.sh -m 7 /path/to/file
 
 $ rotate-backup.sh -h https://hc-ping.com/your-uuid-here /path/to/file
 
@@ -38,11 +38,11 @@ EOF
 }
 
 #### Getopts #####
-while getopts ":r::h::a:" opt; do
+while getopts ":r::h::m:" opt; do
 case $opt in
 r) RETENTION=${OPTARG};;
 h) HEALTHCHECKSURL=${OPTARG};;
-a) FILEAGE=${OPTARG};;
+m) FILEAGE=${OPTARG};;
 \?) echo "$OPTARG is an unknown option" >&2
 usage
 exit 1
